@@ -1,0 +1,14 @@
+<div class="cart-item">
+    <span>{{ cartItem.productName }}</span> x <span>{{ cartItem.qty }}</span>: 
+    <strong>{{ cartItem.qty * cartItem.price | currency:'EUR'}}</strong>
+    <div class="btn-group">
+        <button 
+          type="button"
+          class="btn btn-sm btn product-btn"
+          (click)="handleRemovetoCart()"
+        >-</button>
+        <button type="button"
+        class="btn btn-sm btn product-btn"
+        (click)="handleAddtoCart()">+</button>
+      </div>
+</div>
